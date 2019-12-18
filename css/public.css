@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: '微軟正黑體';
+}
+
+.container {
+    width: 1440px;
+    padding: 0 15px;
+}
+
+.p_fixed {
+    position: fixed;
+    top: 0;
+}
+
+.fz_50px {
+    font-size: 50px;
+}
+
+.fz_35px {
+    font-size: 35px;
+}
+
+.fz_24px {
+    font-size: 24px;
+}
+
+.fz_22px {
+    font-size: 22px;
+}
+
+.fz_18px {
+    font-size: 18px;
+}
+
+.m_bottom20 {
+    margin-bottom: 20px;
+}
+
+.p_top_bottom_100 {
+    padding: 100px 0;
+}
+.d_block {
+    display: block;
+}
+.content .title {
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+
+.content .title::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #F6921E;
+    bottom: 0;
+    left: 0;
+}
+
+.color_white{
+    color: #fff;
+}
