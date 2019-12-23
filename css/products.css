@@ -15,7 +15,9 @@
     display: flex;
     align-items: center;
     width: 100%;
+    
 }
+
 
 .products .item_group .item .txt {
     padding: 0 70px;
@@ -28,7 +30,11 @@
     transition-duration: .5s;
 }
 
-
+@media (max-width:1024px){
+    .products .item_group .item .txt {
+        padding: 0 35px;
+    }
+}
 .products .item_group .item .pic,
 .products .item_group .item .txt {
     width: 100%;
@@ -53,6 +59,18 @@
     transform: translateX(0);
 }
 
+.products .item_group .item .pic:nth-child(odd) img:nth-child(1){
+    width: 50%;
+    position:absolute; 
+    transform: translate(-35% , -30%); 
+    z-index: -1;
+}
+.products .item_group .item .pic:nth-child(even) img:nth-child(1){
+    width: 50%;
+    position:absolute; 
+    transform: translate(135% , -30%); 
+    z-index: -1;
+}
 .products .item_group .item .txt.active {
     opacity: 1;
     transform: translateY(0);
@@ -60,7 +78,7 @@
 
 .products .item_group .item .txt .title_span {
     font-weight: bold;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
 }
 
 .products .products_button {
@@ -81,4 +99,42 @@
     background-color: #FFE9CC;
     color: #C96625;
 
+}
+@media (max-width:868px){
+    .products .item_group .item{
+        flex-direction: column;
+    }
+    .products .item_group .item .pic,
+    .products .item_group .item .txt {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+   
+    .products .item_group .item:nth-child(even) .txt{
+        order: 1;
+    }
+    .products .item_group .item .txt .title_span{
+        text-align: center;
+    }
+
+    .products .item_group .item:nth-child(even) .pic {
+        transform: translateX(-200px);
+        transition-duration: .5s;
+    }
+    .products .item_group .item:nth-child(even) .pic.active {
+        transform: translateX(0);
+    }
+    .products .item_group .item .txt {
+        transform: translateY(0px);
+        transform: translateX(200px);
+    }
+    .products .item_group .item .txt.active {
+        transform: translateX(0);
+    }
+}
+@media (max-width:444px){
+    .products .item_group .item:nth-child(1) .txt p span:nth-child(2){
+        display: block;
+        margin-bottom: 0;
+    }
 }

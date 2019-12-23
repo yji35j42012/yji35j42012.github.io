@@ -21,60 +21,102 @@
         html {
             scroll-behavior: smooth;
         }
-        .NavBar .medium{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .NavBar .medium .logo {
-            display: flex;
-            width: 100px;
-            height: 100%;
-            align-items: center;
-
-        }
-
-        .NavBar .medium .logo img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .NavBar .medium .title {
-
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .NavBar .medium .title img {
-            width: 80px;
-            height: 80%;
-        }
-
-        .NavBar .menu_ctrl {
-            width: 100px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: center;
-        }
-
-        .NavBar .menu_ctrl span {
-            display: block;
-            width: 50px;
-            height: 5px;
-            background-color: #000;
-            margin-bottom: 15px;
-
-        }
     </style>
 </head>
 
 <body>
+    <div class="mask">
+        <div class="suggest_msg_block">
+            <div class="suggest_content">
+                <p>
+                    <label for="">暱稱:</label>
+                    <input type="text" style="height: 36px;" id="name">
+                </p>
+                <p>
+                    <label for="">性別:</label>
+                    <input type="radio" name="gender" id="gender" style="width: 18px;height: 18px;" value="boy">
+                    <span class="fz_24px">男生</span>
+                    <input type="radio" name="gender" id="gender" style="width: 18px;height: 18px; margin-left: 30px;"
+                        value="gril">
+                    <span class="fz_24px">女生</span>
+                </p>
+                <p>
+                    <label for="">留言:</label>
+                    <textarea name="" id="content" rows="3"></textarea>
+                </p>
+                <button class="submit fz_22px">送出留言</button>
+                <button class="cancle fz_22px">取消留言</button>
+            </div>
+        </div>
+        <div class="thanks_block">
+            <div class="pic">
+                <img src="./images/thanks_gril.png" alt="">
+            </div>
+            <div class="txt">
+                <span class="fz_35px" style="margin-bottom: 50px;">謝謝您的留言!!</span>
+                <button class="close_btn fz_22px">關閉</button>
+            </div>
+        </div>
+
+        <!-- <div class="products_block">
+            <div class="item_group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/heart_left.png" alt="">
+                        <img src="./images/products/products1_555_450.jpg" alt="" class="slide-in">
+                    </div>
+                    <div class="txt">
+                        <p style="text-align: center;">
+                            <span class="title_span fz_24px ">鮮草莓牛奶</span>
+                            <span class="title_span fz_24px ">（冬季限定）</span>
+                        </p>
+
+
+                        <span class="fz_18px">
+                            手工現煮的牛奶卡士達醬，搭上飽滿的大湖二號草莓，中間再加入自熬草莓果醬讓整體風味更融合；一口咬下感受外酥內綿Ｑ的外皮，內餡草莓多汁甜香帶點自然酸味，與卡士達濃醇滋味交織，真的豪豪吃啊，想品嚐這款期間限定的美味，趕緊手刀衝一波。
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="txt">
+                        <span class="title_span fz_24px d_block">啵啵珍珠牛奶</span>
+                        <span class="fz_18px">
+                            手工現煮的牛奶卡士達醬，搭上飽滿的大湖二號草莓，中間再加入自熬草莓果醬讓整體風味更融合；一口咬下感受外酥內綿Ｑ的外皮，內餡草莓多汁甜香帶點自然酸味，與卡士達濃醇滋味交織，真的豪豪吃啊，想品嚐這款期間限定的美味，趕緊手刀衝一波。
+                        </span>
+                    </div>
+                    <div class="pic ">
+                        <img src="./images/heart_right.png" alt="">
+                        <img src="./images/products/products2_555_450.jpg" alt="" class="slide-in">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/heart_left.png" alt="">
+                        <img src="./images/products/products3_555_450.jpg" alt="" class="slide-in">
+                    </div>
+                    <div class="txt">
+                        <span class="title_span fz_24px d_block">紅豆牛奶</span>
+                        <span class="fz_18px">
+                            手工現煮的牛奶卡士達醬，搭上飽滿的大湖二號草莓，中間再加入自熬草莓果醬讓整體風味更融合；一口咬下感受外酥內綿Ｑ的外皮，內餡草莓多汁甜香帶點自然酸味，與卡士達濃醇滋味交織，真的豪豪吃啊，想品嚐這款期間限定的美味，趕緊手刀衝一波。
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="txt">
+                        <span class="title_span fz_24px d_block">宇治抹茶珍珠</span>
+                        <span class="fz_18px">
+                            手工現煮的牛奶卡士達醬，搭上飽滿的大湖二號草莓，中間再加入自熬草莓果醬讓整體風味更融合；一口咬下感受外酥內綿Ｑ的外皮，內餡草莓多汁甜香帶點自然酸味，與卡士達濃醇滋味交織，真的豪豪吃啊，想品嚐這款期間限定的美味，趕緊手刀衝一波。
+                        </span>
+                    </div>
+                    <div class="pic">
+                        <img src="./images/heart_right.png" alt="">
+                        <img src="./images/products/products4_555_450.jpg" alt="" class="slide-in">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
     <div id="Banner" class="Banner">
         <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -105,19 +147,21 @@
     </div>
 
     <div class="NavBar">
-        <div class="container">
+        <div class="bottom_line"></div>
+        <div class="container_self">
             <div class="medium">
                 <div class="logo">
                     <img src="./images/LOGO.png" alt="">
-
-
                 </div>
                 <div class="title">
                     <img src="./images/l.png" alt="">
                     <img src="./images/f.png" alt="">
                     <img src="./images/s.png" alt="">
                 </div>
-                <div class="menu_ctrl">
+                <div class="menu_ctrl" id="nav-icon2">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -125,18 +169,22 @@
             </div>
 
             <ul>
-                <li><a href="#about"><span class="fz_35px">關於我們</span><span class="fz_22px">About</span></a></li>
-                <li><a href="#products"><span class="fz_35px">產品介紹</span><span class="fz_22px">Products</span></a></li>
-                <li><a href="#Banner"><img src="./images/LOGO.png" alt=""></a></li>
-                <li><a href="#suggest"><span class="fz_35px">建議回饋</span><span class="fz_22px">Suggest</span></a></li>
-                <li><a href="#contact"><span class="fz_35px">聯絡我們</span><span class="fz_22px">Contact </span></a></li>
+                <li id="about_li"><a href="#about"><span class="fz_24px">關於我們</span><span
+                            class="fz_18px">About</span></a></li>
+                <li id="products_li"><a href="#products"><span class="fz_24px">產品介紹</span><span
+                            class="fz_18px">Products</span></a></li>
+                <li id="banner_li"><a href="#Banner"><img src="./images/LOGO.png" alt=""></a></li>
+                <li id="suggest_li"><a href="#suggest"><span class="fz_24px">建議回饋</span><span
+                            class="fz_18px">Suggest</span></a></li>
+                <li id="contact_li"><a href="#contact"><span class="fz_24px">聯絡我們</span><span class="fz_18px">Contact
+                        </span></a></li>
             </ul>
         </div>
     </div>
 
     <div class="content">
         <div id="about" class="about p_top_bottom_100">
-            <div class="container">
+            <div class="container_self">
                 <div class="title m_bottom20">
                     <span class="fz_50px">關於我們</span>
                 </div>
@@ -196,26 +244,50 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-                <div class="video_content"></div>
+                <div class="video_content">
+                    <div class="item">
+                        <div class="pic">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-aAkHZft1jI"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="txt"></div>
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xBgxQUcwzz0"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="txt"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        </style>
+
         <div id="products" class="products p_top_bottom_100">
-            <div class="container">
+
+            <div class="container_self">
                 <div class="title m_bottom20">
                     <span class="fz_50px">產品介紹</span>
                 </div>
                 <div class="item_group">
-
                     <div class="item">
                         <div class="pic">
+                            <img src="./images/heart_left.png" alt="">
                             <img src="./images/products/products1_555_450.jpg" alt="" class="slide-in">
                         </div>
                         <div class="txt">
-                            <span class="title_span fz_24px d_block">鮮草莓牛奶（冬季限定）</span>
+                            <p style="text-align: center;">
+                                <span class="title_span fz_24px ">鮮草莓牛奶</span>
+                                <span class="title_span fz_24px ">（冬季限定）</span>
+                            </p>
+
+
                             <span class="fz_18px">
                                 手工現煮的牛奶卡士達醬，搭上飽滿的大湖二號草莓，中間再加入自熬草莓果醬讓整體風味更融合；一口咬下感受外酥內綿Ｑ的外皮，內餡草莓多汁甜香帶點自然酸味，與卡士達濃醇滋味交織，真的豪豪吃啊，想品嚐這款期間限定的美味，趕緊手刀衝一波。
                             </span>
@@ -229,11 +301,13 @@
                             </span>
                         </div>
                         <div class="pic ">
+                            <img src="./images/heart_right.png" alt="">
                             <img src="./images/products/products2_555_450.jpg" alt="" class="slide-in">
                         </div>
                     </div>
                     <div class="item">
                         <div class="pic">
+                            <img src="./images/heart_left.png" alt="">
                             <img src="./images/products/products3_555_450.jpg" alt="" class="slide-in">
                         </div>
                         <div class="txt">
@@ -251,9 +325,59 @@
                             </span>
                         </div>
                         <div class="pic">
+                            <img src="./images/heart_right.png" alt="">
                             <img src="./images/products/products4_555_450.jpg" alt="" class="slide-in">
                         </div>
                     </div>
+                    <!-- <div class="item hidden">
+                        <div class="pic">
+                            <img src="./images/heart_left.png" alt="">
+                            <img src="./images/products/products3_555_450.jpg" alt="" class="slide-in">
+                        </div>
+                        <div class="txt">
+                            <span class="title_span fz_24px d_block">紅豆牛奶</span>
+                            <span class="fz_18px">
+                                手工現煮的牛奶卡士達醬，搭上飽滿的大湖二號草莓，中間再加入自熬草莓果醬讓整體風味更融合；一口咬下感受外酥內綿Ｑ的外皮，內餡草莓多汁甜香帶點自然酸味，與卡士達濃醇滋味交織，真的豪豪吃啊，想品嚐這款期間限定的美味，趕緊手刀衝一波。
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item hidden">
+                        <div class="txt">
+                            <span class="title_span fz_24px d_block">宇治抹茶珍珠</span>
+                            <span class="fz_18px">
+                                手工現煮的牛奶卡士達醬，搭上飽滿的大湖二號草莓，中間再加入自熬草莓果醬讓整體風味更融合；一口咬下感受外酥內綿Ｑ的外皮，內餡草莓多汁甜香帶點自然酸味，與卡士達濃醇滋味交織，真的豪豪吃啊，想品嚐這款期間限定的美味，趕緊手刀衝一波。
+                            </span>
+                        </div>
+                        <div class="pic">
+                            <img src="./images/heart_right.png" alt="">
+                            <img src="./images/products/products4_555_450.jpg" alt="" class="slide-in">
+                        </div>
+                    </div>
+                    <div class="item hidden">
+                        <div class="pic">
+                            <img src="./images/heart_left.png" alt="">
+                            <img src="./images/products/products3_555_450.jpg" alt="" class="slide-in">
+                        </div>
+                        <div class="txt">
+                            <span class="title_span fz_24px d_block">紅豆牛奶</span>
+                            <span class="fz_18px">
+                                手工現煮的牛奶卡士達醬，搭上飽滿的大湖二號草莓，中間再加入自熬草莓果醬讓整體風味更融合；一口咬下感受外酥內綿Ｑ的外皮，內餡草莓多汁甜香帶點自然酸味，與卡士達濃醇滋味交織，真的豪豪吃啊，想品嚐這款期間限定的美味，趕緊手刀衝一波。
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item hidden">
+                        <div class="txt">
+                            <span class="title_span fz_24px d_block">宇治抹茶珍珠</span>
+                            <span class="fz_18px">
+                                手工現煮的牛奶卡士達醬，搭上飽滿的大湖二號草莓，中間再加入自熬草莓果醬讓整體風味更融合；一口咬下感受外酥內綿Ｑ的外皮，內餡草莓多汁甜香帶點自然酸味，與卡士達濃醇滋味交織，真的豪豪吃啊，想品嚐這款期間限定的美味，趕緊手刀衝一波。
+                            </span>
+                        </div>
+                        <div class="pic">
+                            <img src="./images/heart_right.png" alt="">
+                            <img src="./images/products/products4_555_450.jpg" alt="" class="slide-in">
+                        </div>
+                    </div> -->
+
                 </div>
 
                 <div class="products_button">
@@ -261,9 +385,9 @@
                 </div>
             </div>
         </div>
-
+      
         <div id="suggest" class="suggest p_top_bottom_100">
-            <div class="container">
+            <div class="container_self">
                 <div class="title m_bottom20">
                     <span class="fz_50px">建議回饋</span>
                 </div>
@@ -271,51 +395,17 @@
 
                 <div class="msg_btn">
                     <span class="msg fz_22px">我要留言</span>
-                    <div class="mask"></div>
-                    <div class="suggest_msg_block">
 
-                        <div class="suggest_content">
-                            <p>
-                                <label for="">暱稱:</label>
-                                <input type="text" style="height: 36px;" id="name">
-                            </p>
-                            <p>
-                                <label for="">性別:</label>
-                                <input type="radio" name="gender" id="gender" style="width: 18px;height: 18px;"
-                                    value="boy">
-                                <span class="fz_24px">男生</span>
-                                <input type="radio" name="gender" id="gender"
-                                    style="width: 18px;height: 18px; margin-left: 30px;" value="gril">
-                                <span class="fz_24px">女生</span>
-                            </p>
-                            <p>
-                                <label for="">留言:</label>
-                                <textarea name="" id="content" rows="3"></textarea>
-                            </p>
-
-                            <button class="submit fz_22px">送出留言</button>
-                            <button class="cancle fz_22px">取消留言</button>
-                        </div>
-
-                    </div>
-
-                    <div class="thanks_block">
-                        <div class="pic">
-                            <img src="./images/thanks_gril.png" alt="">
-                        </div>
-                        <div class="txt">
-                            <span class="fz_35px" style="margin-bottom: 50px;">謝謝您的留言!!</span>
-                            <button class="close_btn fz_22px">關閉</button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
 
 
-
         <div id="contact" class="contact p_top_bottom_100">
-            <div class="container">
+            <div class="bgimg">
+                <img src="./images/contact.png" alt="">
+            </div>
+            <div class="container_self">
                 <div class="title m_bottom20">
                     <span class="fz_50px">聯絡我們</span>
                 </div>
@@ -360,10 +450,16 @@
                 <img src="./images/LOGO.png" alt="">
             </div>
             <div class="txt">
-                <p><span class="fz_35px color_white">LINE(美村店)</span><span class="fz_24px p_18px_13px"
-                        style="letter-spacing: 6px;">0913740529</span></p>
-                <p><span class="fz_35px color_white " style="letter-spacing: 6px;">facebook</span><span
-                        class="fz_24px p_18px_13px" style="letter-spacing: 4px;">樂福燒loveheartcake(永靖總店)</span></p>
+                <p>
+                    <span class="fz_35px color_white">LINE(美村店)</span>
+                    <span class="fz_24px p_18px_13px">0913740529</span>
+                </p>
+
+                <p>
+                    <span class="fz_35px color_white ">facebook</span>
+                    <span class="fz_24px p_18px_13px">樂福燒loveheartcake(永靖總店)</span>
+                </p>
+
                 <p><span class="fz_24px color_white">©版權聲明</span><span class="fz_24px color_white">本網頁僅供教學及練習使用</span>
                 </p>
             </div>
@@ -383,8 +479,21 @@
     <script src="./js/banner_V4.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/about.js"></script>
+    <script src="./js/suggest.js"></script>
 
     <script>
+        var gender_content;
+        var gender_count;
+        var gender;
+        var submit = document.querySelector('.mask .suggest_msg_block .submit')
+        var cancle = document.querySelector('.mask .suggest_msg_block .cancle')
+        var close_btn = document.querySelector('.close_btn')
+        var thanks_block = document.querySelector('.mask .thanks_block')
+        var msg_block = document.querySelector('.mask .suggest_msg_block')
+
+        var timer;
+
+
         let suggest_inf = [
             {
                 suggest_id: 1,
@@ -405,18 +514,10 @@
                 suggest_content: '內餡誠意十足，鯛魚雪燒在炎炎夏日來 一份特別好!'
             },
         ]
-        var gender_content;
-        var gender_count;
-        var gender;
 
-        var submit = document.querySelector('.msg_btn .suggest_msg_block .submit')
-        var cancle = document.querySelector('.msg_btn .suggest_msg_block .cancle')
-        var close_btn = document.querySelector('.close_btn')
-        var thanks_block = document.querySelector('.thanks_block')
-
-        var timer;
         submit.onclick = function () {
-            const name = document.querySelector('.msg_btn .suggest_msg_block #name')
+
+            const name = document.querySelector('.mask .suggest_msg_block #name')
             if (gender_content == 'boy') {
                 gender_count = random_pic(3)
                 switch (gender_count) {
@@ -441,8 +542,7 @@
                         break
                 }
             }
-
-            const content = document.querySelector('.msg_btn .suggest_msg_block #content')
+            const content = document.querySelector('.mask .suggest_msg_block #content')
             var suggest_item_group = document.querySelector('.suggest .container .item_group')
 
             suggest_inf.unshift({
@@ -451,21 +551,19 @@
                 suggest_gender: gender,
                 suggest_content: content.value
             });
-            first_inset()
-            msg_block.style.display = 'none'
-            thanks_block.classList.add('active')
-            timer = setTimeout(function () {
 
+            first_inset()
+
+            thanks_block.classList.add('active')
+            msg_block.style.display = 'none'
+            timer = setTimeout(function () {
                 clossAll()
             }, 3000)
         }
-
-
-
         function random_pic(num) {
             return gender_count = Math.floor(Math.random() * num) + 1;
         }
-        var genderHendler = document.querySelectorAll('.msg_btn .suggest_msg_block #gender')
+        var genderHendler = document.querySelectorAll('.mask .suggest_msg_block #gender')
 
         for (let i = 0; i < genderHendler.length; i++) {
             const element = genderHendler[i];
@@ -475,12 +573,14 @@
             }
         }
         var msg_click = document.querySelector('.msg')
-        var mask = document.querySelector('.msg_btn .mask')
-        var msg_block = document.querySelector('.msg_btn .suggest_msg_block')
+        var mask = document.querySelector('.mask')
+
 
         msg_click.onclick = function () {
-            mask.style.display = 'block'
-            msg_block.style.display = 'block'
+            console.log('aaa');
+
+            mask.style.display = 'flex'
+            msg_block.style.display = 'flex'
         }
         cancle.onclick = function () {
             clossAll()
@@ -498,7 +598,7 @@
         }
 
         function first_inset() {
-            var suggest_item_group = document.querySelector('.suggest .container .item_group')
+            var suggest_item_group = document.querySelector('.suggest .item_group')
             suggest_item_group.innerHTML = ''
             for (let i = 0; i < suggest_inf.length; i++) {
                 const element = suggest_inf[i];
@@ -551,7 +651,6 @@
             slider.classList.remove('active');
         });
         slider.addEventListener('touchend', () => {
-            // console.log('touchend');
             isDown = false;
             slider.classList.remove('active');
         });
@@ -559,19 +658,16 @@
             if (!isDown) return;  // stop the fn from running
             e.preventDefault();
             const x = e.pageX - slider.offsetLeft;
-            // console.log(e.touches.pageX);
             const walk = (x - startX) * 3;
             slider.scrollLeft = scrollLeft - walk;
         });
 
         slider.addEventListener('touchmove', (e) => {
             var touch = e.touches[0];
-            // console.log(touch.pageX);
 
             if (!isDown) return;  // stop the fn from running
             e.preventDefault();
             const x = touch.pageX - slider.offsetLeft;
-
 
             const walk = (x - startX) * 3;
             console.log(startX);
@@ -581,11 +677,73 @@
         function clearAll() {
             const name = document.querySelector('.msg_btn .suggest_msg_block #name')
             const content = document.querySelector('.msg_btn .suggest_msg_block #content')
-
             name.value = ''
             content.value = ''
         }
-    </script>
+        var menu_ctrl = document.querySelector('.menu_ctrl')
+        var medium = document.querySelector('.NavBar ul')
+        var a_ctrl = document.querySelectorAll('.NavBar ul li a')
+        var bottom_line = document.querySelector('.NavBar .bottom_line')
+        var icon2 = document.querySelector('#nav-icon2')
+
+        function navHendler(e) {
+            var window_width = window.innerWidth
+
+            icon2.classList.toggle('open')
+            // console.log(window_width);
+
+            if (window_width <= 768 && !medium.classList.contains('active')) {
+                console.log('aaa');
+                medium.classList.add('active')
+                mask.style.display = 'block'
+                msg_block.style.display = 'none'
+
+            } else {
+
+                medium.classList.remove('active')
+                mask.style.display = 'none'
+            }
+        }
+
+
+        a_ctrl.forEach(function (button) {
+            button.addEventListener('click', navHendler)
+        })
+
+        menu_ctrl.addEventListener('click', navHendler)
+
+
+        mask.onclick = function () {
+            if (medium.classList.contains('active')) {
+                mask.style.display = 'none'
+                medium.classList.remove('active')
+
+                icon2.classList.remove('open')
+            }
+        }
+
+
+
+        var products_btn = document.querySelector('#products .products_button')
+            var products_item = document.querySelectorAll('#products .item_group .item')
+            // console.log(products_items);
+            products_btn.onclick = function () {
+                console.log(products_item[0].offsetTop);
+                console.log(products_item[0].offsetHeight);
+                console.log(products_item[1].offsetHeight);
+                console.log(products_item[2].offsetHeight);
+                console.log(products_item[3].offsetHeight);
+                
+                // for (let i = 0; i < products_item.length; i++) {
+                //     console.log(products_item[i].classList.contains('hidden'));
+                //     if(products_item[i].classList.contains('hidden')){
+                //         // products_item[i].style.height = 'auto'
+                //         console.log(products_item[i].offsetHeight);
+                        
+                //     }
+                // }
+            }
+    </script>  
 </body>
 
 </html>
