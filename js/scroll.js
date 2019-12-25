@@ -1,6 +1,5 @@
 var products_items = document.querySelectorAll('.products .item_group .item .pic')
 var products_items_txts = document.querySelectorAll('.products .item_group .item .txt')
-
 var bottom_line = document.querySelector('.NavBar .bottom_line')
 var about = document.querySelector('#about')
 var products = document.querySelector('#products')
@@ -116,3 +115,5 @@ function scrollHendler() {
 }
 
 change_line('banner_li')
+
+
