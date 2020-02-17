@@ -3,6 +3,7 @@
     height: 100px;
     background-color: #f9ca86;
     z-index: 9999999;
+    position: relative;
 }
 .NavBar.p_fixed {
     position: fixed;
