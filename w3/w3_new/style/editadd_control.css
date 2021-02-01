@@ -129,10 +129,12 @@
 .mem_data._fixed{
 	position: fixed;
 	max-width: 490px;
-	height: calc(100% - 240px);
+	max-height: calc(100% - 240px);
 	top: 120px;
 	left: 54%;
-	padding-right: 30px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
 }
 .mem_title{
 	position: relative;
@@ -166,10 +168,11 @@
 }
 .mem_inf_list{
 	height: 100%;
-	padding-bottom: 20px;
 	border-radius: 3px;
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
+	/* height: calc(100% - 240px); */
+	/* overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch; */
 }
 .mem_inf_list th{
 	padding: 10px 0;
@@ -658,8 +661,6 @@ input:disabled ~ i,
 .no_input.normal_select::after{display: none;}
 
 
-
-
 /* 工作碼比數 */
 .mem_reselect_tb{
 	display: flex;
@@ -963,12 +964,14 @@ input:disabled ~ i,
 		height: 180px;
 		left: 0;
 		padding: 30px 15px 0;
-	
 		top:0;
 		background: #fff;
 	}
 	.mem_inf_list{
 		padding-bottom: 0;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
 	}
 	.mem_rwd_tb tr{
 		display: flex;
