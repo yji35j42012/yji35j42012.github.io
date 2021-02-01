@@ -130,7 +130,7 @@
 	position: fixed;
 	max-width: 490px;
 	max-height: calc(100% - 240px);
-	top: 120px;
+	/* top: 120px; */
 	left: 54%;
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -207,7 +207,7 @@
 }
 /* 加 */
 
-.mem_tb,
+.mem_tb { width: 100%;}
 .mem_rwd_tb{ width: 100%; border-radius: 3px; overflow: hidden;}
 .mem_tb th{ padding: 15px 0;}
 .mem_tb td{ padding: 5px 0;}
@@ -817,15 +817,21 @@ input:disabled ~ i,
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+.mem_td_row + .mem_td_row{
+	margin-top: 10px;
+}
 .mem_td_row ul{
 	display: inline-flex;
-	width: calc(50% - 6px);
+	width: 50%;
 	align-items: center;
+	flex-wrap: wrap;
 }
 .mem_td_row ul li{
-	width: 100%;
+	width: calc(100% - 80px);
+	padding: 0 3px;
+	/* margin-top: 10px; */
 }
-.mem_td_row ul li:first-child{
+.mem_td_row ul li:nth-child(odd){
 	flex: none;
 	width: 80px;
 	white-space: nowrap;
@@ -852,8 +858,23 @@ input:disabled ~ i,
 .mem_row_detail span:nth-child(2){
 	text-align: center;
 }
-
-
+.mem_data_title{
+	position: relative;
+}
+.mem_data_title ul{
+	margin-top: 10px;
+}
+.mem_data_title::before{
+	content: attr(data-title);
+	width: 100%;
+	background: #F2F2F2;
+	padding: 5px 0;
+	text-align: center;
+	border-radius: 3px;
+}
+.mem_data_title li{
+	margin-top: 10px;
+}
 
 @media only screen and (min-width:768px) and (max-width: 976px){
 	.mem_function{
